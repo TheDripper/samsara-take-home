@@ -9,18 +9,19 @@
           :key="item.id"
           class="swiper-slide"
         >
-            <img 
-              :id="`slider-${index}`" 
-              :src="item.image"
-            >
+          <div class="image-frame">
+              <img 
+                :id="`slider-${index}`" 
+                :src="item.image"
+              >
+          </div>
           <div class="wrap">
             <h2 v-html="item.title" />
             <p v-html="item.copy"/>
           </div>
         </div>
       </div>
-      <div class="swiper-pagination swiper-pagination-bullets flex items-center justify-center py-8" />
-      <div class="swiper-nav flex py-16">
+      <div class="swiper-nav flex py-8 lg:py-16">
         <img id="back" src="/left.svg" class="mr-4"/>
         <img id="next" src="/right.svg" />
       </div>
@@ -95,18 +96,41 @@ export default {
 h2 {
   font-size: 24px; 
   @screen md {
+    font-size: 34px;
+  }
+  @screen xl {
     font-size: 54px;
   }
 }
 .wrap {
-  @apply p-8 pt-12;
+  @apply p-8;
+  height: 160px;
   @screen md {
-    height: 400px;
+    height: 200px;
+  }
+  @screen xl {
+    height: 300px;
   }
 }
 #next,
 #back {
   cursor: pointer;
   z-index: 2;
+  width: 40%;
+  max-width: 195px;
+}
+.image-frame {
+  width: 100%;
+  height: 55vw;
+  overflow: hidden;
+  @screen md {
+    height: 28vw;
+  }
+  @screen xl {
+    height: 350px;
+  }
+  img {
+    object-fit: cover;
+  }
 }
 </style>
