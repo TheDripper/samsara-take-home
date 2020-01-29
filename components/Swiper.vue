@@ -9,12 +9,14 @@
           :key="item.id"
           class="swiper-slide"
         >
-          <img 
-            :id="`slider-${index}`" 
-            :src="item.image"
-          >
-          <h2>{{ item.title }}</h2>
-          <p>{{ item.copy }}</p>
+            <img 
+              :id="`slider-${index}`" 
+              :src="item.image"
+            >
+          <div class="wrap">
+            <h2 v-html="item.title" />
+            <p v-html="item.copy"/>
+          </div>
         </div>
       </div>
       <div class="swiper-pagination swiper-pagination-bullets flex items-center justify-center py-8" />
@@ -38,7 +40,8 @@ export default {
           clickable: true
         },
         slidesPerView: 2,
-        loop: true
+        loop: true,
+        spaceBetween: 50
       }
     }
   },
@@ -62,16 +65,7 @@ export default {
 .swiper-wrapper {
   width: calc(100vw + 4rem);
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100vw;
-    object-fit: cover;
-    @screen md {
-      height: 100%;
-      width: 100%;
-    }
   }
 }
 .swiper-pagination {
@@ -81,14 +75,23 @@ export default {
   left: 0;
 }
 .swiper-slide {
-  height: 490px;
-}
-img {
-  position: absolute;
-  object-fit: cover;
+  background: white;
 }
 .carousel {
-  transform: translate(-2rem);
   z-index: 2;
+  width: 1200px;
+  margin-bottom: 600px;
+}
+h2 {
+  font-size: 24px; 
+  @screen md {
+    font-size: 54px;
+  }
+}
+.wrap {
+  @apply p-8 pt-12;
+  @screen md {
+    height: 400px;
+  }
 }
 </style>

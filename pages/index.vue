@@ -38,26 +38,26 @@ export default {
       swiperItems: [
         {
           image: '/one.png',
-          title: 'Photography - Events',
+          title: 'Photography-<br /> Office',
           copy: 'Internal and Customer Events',
           id: 'one'
         },
         {
           image: '/two.png',
-          title: 'Photography - Events',
-          copy: 'Internal and Customer Events',
+          title: 'Illustrations',
+          copy: 'Illustrated Assets and Icons',
           id: 'two'
         },
         {
-          image: '/one.png',
+          image: '/three.png',
           title: 'Photography - Events',
-          copy: 'Internal and Customer Events',
+          copy: 'Office and Employees',
           id: 'three'
         },
         {
-          image: '/two.png',
-          title: 'Photography - Events',
-          copy: 'Internal and Customer Events',
+          image: '/four.png',
+          title: 'Photography - Products',
+          copy: 'In Situ and Renderings',
           id: 'four'
         }
       ]
@@ -78,9 +78,8 @@ main {
   overflow-y: hidden;
 }
 #browse {
-  @apply flex flex-col justify-end items-center;
+  @apply flex flex-col items-center;
   min-height: calc(100vh - 110px);
-  
 }
 .accordion_container {
   max-width: 1400px;
