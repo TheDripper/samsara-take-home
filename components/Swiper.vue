@@ -20,6 +20,10 @@
         </div>
       </div>
       <div class="swiper-pagination swiper-pagination-bullets flex items-center justify-center py-8" />
+      <div class="swiper-nav flex py-16">
+        <img id="back" src="/left.svg" class="mr-4"/>
+        <img id="next" src="/right.svg" />
+      </div>
     </div>
   </div>
 </template>
@@ -35,13 +39,18 @@ export default {
   data() {
     return {
       swiperOptions: {
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true
+        loop: true,
+        navigation: {
+          prevEl: '#back',
+          nextEl: '#next'
         },
         slidesPerView: 2,
-        loop: true,
-        spaceBetween: 50
+        spaceBetween: 24,
+        breakpoints: {
+          768: {
+            slidesPerView: 1
+          }
+        }
       }
     }
   },
@@ -79,7 +88,8 @@ export default {
 }
 .carousel {
   z-index: 2;
-  width: 1200px;
+  @apply w-full px-6;
+  max-width: 1200px;
   margin-bottom: 600px;
 }
 h2 {
@@ -93,5 +103,10 @@ h2 {
   @screen md {
     height: 400px;
   }
+}
+#next,
+#back {
+  cursor: pointer;
+  z-index: 2;
 }
 </style>

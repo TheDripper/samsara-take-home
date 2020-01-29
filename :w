@@ -1,0 +1,52 @@
+<template>
+  <div class="carousel">
+    <div>
+      <div class="swiper-wrapper">
+        <div
+          v-for="(item, index) in items"
+          :key="item.id"
+          class="swiper-slide"
+        >
+            <img 
+              :id="`slider-${index}`" 
+              :src="item.image"
+            >
+          <div class="wrap">
+            <h2 v-html="item.title" />
+            <p v-html="item.copy"/>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination swiper-pagination-bullets flex items-center justify-center py-8" />
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  props: {
+    items: {
+      type: Array,
+      default: () => []
+    }
+  },
+  mounted() {
+    $('.carousel').slick()
+  },
+  data() {
+    return {
+      swiperOptions: {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        },
+        slidesPerView: 2,
+        loop: true,
+        spaceBetween: 50
+      }
+    }
+  },
+}
+</script>
+<style scoped lang="scss">
+</style>
