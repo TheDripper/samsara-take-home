@@ -1,6 +1,6 @@
 # samsara-take-home
 
-> My superb Nuxt.js project
+> Staged on: https://reverent-galileo-7268b1.netlify.com/
 
 ## Build Setup
 
