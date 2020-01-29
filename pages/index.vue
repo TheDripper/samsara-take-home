@@ -1,7 +1,8 @@
 <template>
   <main id="browse">
+    <Swiper :items="swiperItems" />
     <div class="bg-white accordion_container">
-      <Accordion v-for="(item, i) in items" :content="item.content" />
+      <Accordion v-for="(item, i) in accordionItems" :content="item.content" />
     </div>
   </main>
 </template>
@@ -9,11 +10,12 @@
 <script>
 import Logo from '~/components/Logo.vue'
 import Accordion from '~/components/Accordion.vue'
+import Swiper from '~/components/Swiper.vue'
 
 export default {
   data() {
     return {
-      items: [
+      accordionItems: [
         {
           content: {
             listItem: 'Brand Design',
@@ -32,11 +34,39 @@ export default {
             accordionText: 'As we continue to scale globally, keeping our brand materials consistent across channels becomes increasingly important. We want to ensure a consistent standard of excellence in how we present ourselves to our current and future customers.'
           }
         }
+      ],
+      swiperItems: [
+        {
+          image: '/one.png',
+          title: 'Photography - Events',
+          copy: 'Internal and Customer Events',
+          id: 'one'
+        },
+        {
+          image: '/two.png',
+          title: 'Photography - Events',
+          copy: 'Internal and Customer Events',
+          id: 'two'
+        },
+        {
+          image: '/one.png',
+          title: 'Photography - Events',
+          copy: 'Internal and Customer Events',
+          id: 'three'
+        },
+        {
+          image: '/two.png',
+          title: 'Photography - Events',
+          copy: 'Internal and Customer Events',
+          id: 'four'
+        }
       ]
+
     }
   },
   components: {
     Accordion,
+    Swiper,
     Logo
   }
 }

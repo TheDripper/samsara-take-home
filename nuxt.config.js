@@ -29,7 +29,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/accordion'
+    '~/plugins/accordion',
+    { src: '~/plugins/swiper.js', ssr: false }
   ],
   /*
   ** Nuxt.js modules
