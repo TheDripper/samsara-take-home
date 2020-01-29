@@ -8006,6 +8006,11 @@ vm-browserify@^1.0.1:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-1.1.2.tgz#78641c488b8e6ca91a75f511e7a3b32a86e5dda0"
   integrity sha512-2ham8XPWTONajOR0ohOKOHXkm3+gaBmGut3SRuu75xLd/RRaY6vqgh8NBYYk7+RW3u5AtzPQZG8F10LHkl0lAQ==
 
+vue-accordion@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/vue-accordion/-/vue-accordion-1.0.0.tgz#b3ba39b22e49037860c5a89683bd68a3e05ee3ea"
+  integrity sha1-s7o5si5JA3hgxaiWg71oo+Be4+o=
+
 vue-client-only@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.0.0.tgz#ddad8d675ee02c761a14229f0e440e219de1da1c"

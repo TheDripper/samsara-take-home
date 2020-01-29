@@ -1,15 +1,42 @@
 <template>
   <main id="browse">
     <div class="bg-white accordion_container">
+      <Accordion v-for="(item, i) in items" :content="item.content" />
     </div>
   </main>
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Accordion from '~/components/Accordion.vue'
 
 export default {
+  data() {
+    return {
+      items: [
+        {
+          content: {
+            listItem: 'Brand Design',
+            accordionText: 'As we continue to scale globally, keeping our brand materials consistent across channels becomes increasingly important. We want to ensure a consistent standard of excellence in how we present ourselves to our current and future customers.'
+          }
+        },
+        {
+          content: {
+            listItem: 'Typography',
+            accordionText: 'As we continue to scale globally, keeping our brand materials consistent across channels becomes increasingly important. We want to ensure a consistent standard of excellence in how we present ourselves to our current and future customers.'
+          }
+        },
+        {
+          content: {
+            listItem: 'Colors',
+            accordionText: 'As we continue to scale globally, keeping our brand materials consistent across channels becomes increasingly important. We want to ensure a consistent standard of excellence in how we present ourselves to our current and future customers.'
+          }
+        }
+      ]
+    }
+  },
   components: {
+    Accordion,
     Logo
   }
 }
@@ -18,7 +45,7 @@ export default {
 <style lang="scss" scoped>
 main {
   max-width: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 #browse {
   @apply flex flex-col justify-end items-center;
@@ -26,7 +53,6 @@ main {
   
 }
 .accordion_container {
-  height: 400px;
   max-width: 1400px;
   @apply relative w-full;
   &:before {
@@ -35,7 +61,7 @@ main {
     position: absolute;
     top: 0px;
     left: 0px;
-    transform: rotate(-20deg) translateY(-5%);
+    transform: rotate(-20deg) translateY(-15%);
     width: 200vw;
     height: 200vw;
   }
