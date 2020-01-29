@@ -94,6 +94,7 @@ export default {
 }
 h2 {
   font-size: 24px; 
+  color: #00263E;
   @screen md {
     font-size: 34px;
   }
@@ -104,9 +105,6 @@ h2 {
 .wrap {
   @apply p-8;
   height: 200px;
-  h2 {
-    color: #00263E;
-  }
   @screen xl {
     height: 300px;
   }

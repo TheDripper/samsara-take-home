@@ -124,6 +124,7 @@ h1 {
 }
 h2 {
   font-size: 24px; 
+  max-width: 714px;
   @screen md {
     font-size: 34px;
   }
@@ -145,6 +146,8 @@ h2 {
     height: 200vw;
   }
   h2 {
+    @apply relative mx-auto py-8; 
+    width: calc(100% - 4rem);
     color: #00263E;
   }
 }
