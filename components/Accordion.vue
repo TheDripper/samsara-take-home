@@ -55,8 +55,8 @@ export default {
 .list-item {
   cursor: pointer;
   @apply flex flex-col justify-between mx-auto border-t relative;
-  max-width: 714px;
   width: calc(100% - 4rem);
+  max-width: 714px;
   border-color: #00263E;
   &:last-child {
     @apply border-b;

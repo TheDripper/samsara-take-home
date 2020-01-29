@@ -1,7 +1,10 @@
 <template>
   <main id="browse">
+    <h1 class="text-white">Browse the Libraries Below</h1>
     <Swiper :items="swiperItems" />
+    <img id="burst" src="/burst.png" />
     <div class="bg-white accordion_container">
+      <h2>The importance of brand consistency</h2>
       <Accordion v-for="(item, i) in accordionItems" :content="item.content" />
     </div>
   </main>
@@ -81,20 +84,6 @@ main {
   @apply flex flex-col items-center;
   min-height: calc(100vh - 110px);
 }
-.accordion_container {
-  max-width: 1400px;
-  @apply relative w-full;
-  &:before {
-    background: white;
-    content: '';
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    transform: rotate(-20deg) translateY(-15%);
-    width: 200vw;
-    height: 200vw;
-  }
-}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -110,19 +99,53 @@ main {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #00263E;
   letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
 }
 
 .links {
   padding-top: 15px;
+}
+#burst {
+  margin-left: auto;
+  @screen md {
+    transform: translate(-5%, -34%);
+  }
+}
+h1 {
+  @apply text-3xl p-6 w-full;
+  max-width: 1200px;
+  @screen md {
+    @apply text-5xl text-left px-6;
+  }
+  @screen lg {
+    @apply text-6xl py-16;
+  }
+}
+h2 {
+  font-size: 24px; 
+  @screen md {
+    font-size: 34px;
+  }
+  @screen xl {
+    font-size: 54px;
+  }
+}
+.accordion_container {
+  max-width: 1400px;
+  @apply relative w-full pb-64;
+  &:before {
+    background: white;
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: rotate(-20deg) translateY(-15%);
+    width: 200vw;
+    height: 200vw;
+  }
+  h2 {
+    color: #00263E;
+  }
 }
 </style>

@@ -91,7 +91,6 @@ export default {
   z-index: 2;
   @apply w-full px-6;
   max-width: 1200px;
-  margin-bottom: 600px;
 }
 h2 {
   font-size: 24px; 
@@ -104,9 +103,9 @@ h2 {
 }
 .wrap {
   @apply p-8;
-  height: 160px;
-  @screen md {
-    height: 200px;
+  height: 200px;
+  h2 {
+    color: #00263E;
   }
   @screen xl {
     height: 300px;
